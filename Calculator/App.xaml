@@ -11,7 +11,23 @@
         <Style TargetType="Button">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="25"/>
-   
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="numberButtonStyle">
+            <Setter Property="Background" Value="{StaticResource numberColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource foreground}"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="operatorButtonStyle" BasedOn="{StaticResource numberButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource operationColor}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="otherButtonStyle" BasedOn="{StaticResource numberButtonStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="LightGray"/>
         </Style>
 
         <Style TargetType="Label">
