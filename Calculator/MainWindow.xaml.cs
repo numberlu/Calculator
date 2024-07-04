@@ -54,10 +54,10 @@ namespace Calculator
 
         private void PercButton_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            if (double.TryParse(resultLabel.Content.ToString(), out double newNumber))
             {
-                lastNumber /= 100;
-                resultLabel.Content = lastNumber.ToString();
+                newNumber = lastNumber * newNumber / 100;
+                resultLabel.Content = newNumber.ToString();
             }
         }
 
